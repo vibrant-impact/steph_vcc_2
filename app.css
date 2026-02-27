@@ -13,9 +13,28 @@ body {
   padding: 20px;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
+:root {
+  --shapeSize: 100px;
+  --containerGap: 20px;
+  --accentColor: #7f5af0; 
+}
+
+.shapeContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 40px;
+  justify-items: center;
+}
+
+.shape {
+  width: 100px;
+  height: 100px;
+  background-color: #7f5af0;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.shape:hover {
+  transform: scale(1.1);
 }
