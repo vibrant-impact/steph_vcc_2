@@ -79,6 +79,7 @@ h2 {
 }
 
 .codeDisplay {
+  display: none;
   position: sticky;
   bottom: 20px;
   max-width: 800px;
@@ -106,6 +107,17 @@ h2 {
 #copyBtn:hover {
   background-color: #6b46c1;
   opacity: 0.9;
+}
+
+#closeBtn {
+  color: var(--textSecondary);
+  transition: color 0.2s;
+  line-height: 1;
+  margin-left: 20px;
+}
+
+#closeBtn:hover {
+  color: #ff5f56; /* Soft red for close */
 }
 
 .circle {  
