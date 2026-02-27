@@ -1,5 +1,8 @@
 # 🎨 Vibrant Impact's CSS Shape Library
 
+## 🔗 Live Demo
+[View the Curated CSS Shape Library](https://vibrant-impact.github.io/steph_vcc_2/)
+
 A comprehensive, single-element CSS shape library designed for modern UI/UX development. This repository serves as a practical resource for developers looking for lightweight, performant geometric patterns and icons without the need for SVG or image assets.
 
 ## 🚀 The Vision
@@ -18,6 +21,12 @@ The project follows a strict development workflow:
 * **Structure:** - `index.html`: The interactive gallery layout.
   - `app.css`: The shape engine containing all geometric logic.
   - `app.js`: The code-display interaction logic.
+
+## 🛠️ How to Use
+1. Browse the library and click on a shape you like.
+2. The CSS code will appear in the display at the bottom of the page.
+3. Click **Copy CSS** and paste it into your own stylesheet.
+4. Ensure your project uses `box-sizing: border-box` for the most accurate rendering.
 
 ## 📸 Preview
 | Polygons | UI Icons | Organic Shapes |
