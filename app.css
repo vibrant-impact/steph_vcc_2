@@ -7,35 +7,66 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background: #f0f0f0;
-  color: #333;
-  padding: 20px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bgPrimary);
+  color: var(--textPrimary);
+  padding: 40px 20px;
+  line-height: 1.6;
 }
 
 :root {
-  --shapeSize: 100px;
-  --containerGap: 20px;
-  --accentColor: #7f5af0; 
+  /* Designer Palette - Spiritual & Modern */
+  --bgPrimary: #f1f5f9;        /* Soft off-white */
+  --bgSecondary: #ffffff;      /* Pure white for cards */
+  --textPrimary: #1e293b;      /* Deep slate */
+  --textSecondary: #64748b;    /* Muted slate */
+  --accentZen: #7f5af0;        /* Your preferred purple */
+  --accentGold: #d4af37;       /* Gold for spiritual shapes */
+  --accentTeal: #2cb67d;       /* Success/UI green */
+  
+  --cardShadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --borderRadius: 16px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--accentZen);
+}
+
+p {
+  text-align: center;
+  color: var(--textSecondary);
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 40px 0 20px 20px;
+  padding-left: 15px;
+  border-left: 4px solid var(--accentZen);
 }
 
 .shapeContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 30px;
   padding: 20px;
+  margin-bottom: 60px;
 }
 
 .shape {
-  width: 180px;
-  height: 180px;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  overflow: hidden; /* Chops off any 'exploding' CSS parts */
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .shape > * {
@@ -44,17 +75,20 @@ body {
 }
 
 .shape:hover {
-  transform: scale(1.05);
-  z-index: 10;
+  transform: translateY(-10px);
 }
 
 .codeDisplay {
-  margin-top: 50px;
-  padding: 20px;
-  background: #2d2d2d;
-  color: #f8f8f2;
-  border-radius: 8px;
-  min-height: 200px;
+  position: sticky;
+  bottom: 20px;
+  max-width: 800px;
+  margin: 80px auto 20px;
+  padding: 30px;
+  background: #1e1e1e; /* VS Code dark style */
+  color: #d4d4d4;
+  border-radius: var(--borderRadius);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  border: 2px solid var(--accentZen);
 }
 
 #codeContent {
@@ -64,39 +98,35 @@ body {
 }
 
 #copyBtn {
-  background-color: #2cb67d;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 10px;
+  float: right;
+  background-color: var(--accentZen);
+  transition: opacity 0.2s;
 }
 
 #copyBtn:hover {
-  background-color: #249668;
+  background-color: #6b46c1;
+  opacity: 0.9;
 }
 
 .circle {  
-  background-color: red; 
+  background-color: rgb(235, 52, 199); 
   border-radius: 50%;  
 }
 
 .square {
-  background-color: #333;
+  background-color: #64d642;
 }
 
 .triangle {
   aspect-ratio: 1/cos(30deg);
   clip-path: polygon(50% 0,100% 100%,0 100%);
-  background: linear-gradient(45deg,#FA6900,#C02942);
+  background: linear-gradient(45deg,#fae100,#C02942);
 }
 
 .rhombus {
   aspect-ratio: 1;
   clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
-  background: #88A65E;
+  background: #5218a9;
 }
 
 .hexagon {
@@ -116,7 +146,7 @@ body {
     calc(100% - var(--o)) 50%,
     50% calc(100% - var(--o))
   );
-  background: #3B8686;
+  background: #8a36ab;
 }
 
 .parallelogram {
@@ -140,7 +170,7 @@ body {
   --h: 40%; 
   aspect-ratio: 3/2;
   width: 180px;
-  background: #033649;
+  background: #ff6201;
   clip-path: polygon(0 calc(50% - var(--t)/2),calc(100% - var(--h)) calc(50% - var(--t)/2),calc(100% - var(--h)) 0,100% 50%,calc(100% - var(--h)) 100%,calc(100% - var(--h)) calc(50% + var(--t)/2),0 calc(50% + var(--t)/2));
 }
 
@@ -165,12 +195,12 @@ body {
 .minus {
   height: 180px;
   aspect-ratio: 1;
-  border-image: conic-gradient(#BD5532 0 0) 1/calc(50% - 15px) 35px;
+  border-image: conic-gradient(#fc0000 0 0) 1/calc(50% - 15px) 35px;
   clip-path: circle();
 }
 
 .cross {
-  --c: #B90504;
+  --c: #720404;
   height: 180px;
   aspect-ratio: 1;
   box-shadow: 0 0 0 35px inset var(--c);
@@ -208,7 +238,7 @@ body {
   --g: 30%; 
   width: 180px; 
   aspect-ratio: 1.5;
-  background: #8FBE00;
+  background: #374217;
   mask:
     linear-gradient(-90deg,#0000 var(--g),#000 0) 
      0/calc(100%/var(--n)) intersect,
@@ -242,7 +272,6 @@ body {
 
 .shape.infinity {
   background-color: transparent; /* Removes the white box only for infinity */
-  box-shadow: none; /* Optional: removes the card look for this specific icon */
 }
 .infinity {
   --s: 80px; 
@@ -254,7 +283,7 @@ body {
 .infinity:before,
 .infinity:after {
   content: "";
-  box-shadow: 0 0 0 var(--b) inset #774F38; /* the color */
+  box-shadow: 0 0 0 var(--b) inset #25cde7; /* the color */
   height: var(--s);
   aspect-ratio: 1;
   border-radius: 50% 50% 0 50%;
@@ -266,6 +295,7 @@ body {
 
 .flower {
   width: 180px; 
+  background-color: rgb(249, 108, 202);
   aspect-ratio: 1;
   --g:/20.56% 20.56% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
   mask: 100% 50% var(--g),93.301% 75% var(--g),75% 93.301% var(--g),50% 100% var(--g),25% 93.301% var(--g),6.699% 75% var(--g),0% 50% var(--g),6.699% 25% var(--g),25% 6.699% var(--g),50% 0% var(--g),75% 6.699% var(--g),93.301% 25% var(--g),radial-gradient(100% 100%,#000 38.366%,#0000 calc(38.366% + 1px));
@@ -308,6 +338,7 @@ body {
 .starburst {
   width: 180px;
   aspect-ratio: 1;
+  background-color: red;
   clip-path: polygon(100% 50%,78.98% 57.76%,93.3% 75%,71.21% 71.21%,75% 93.3%,57.76% 78.98%,50% 100%,42.24% 78.98%,25% 93.3%,28.79% 71.21%,6.7% 75%,21.02% 57.76%,0% 50%,21.02% 42.24%,6.7% 25%,28.79% 28.79%,25% 6.7%,42.24% 21.02%,50% 0%,57.76% 21.02%,75% 6.7%,71.21% 28.79%,93.3% 25%,78.98% 42.24%);
 }
 
@@ -321,7 +352,7 @@ body {
 .spiral {
   --b: 5px;  /* border thickness */
   --s: 180px; /* preferred size shape */
-  --c: #CD8C52;
+  --c: #2735f7;
 
   width: round(var(--s),4*var(--b));
   aspect-ratio: 1;
