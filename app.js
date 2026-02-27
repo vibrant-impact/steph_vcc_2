@@ -1,27 +1,33 @@
-
 const showCode = (shapeName) => {
   const codeContent = document.getElementById('codeContent');
-  // Logic to fetch and display the CSS
-  console.log(`Displaying code for: ${shapeName}`);
-};
-
-const copyToClipboard = () => {
-  const codeText = document.getElementById('codeContent').innerText;
+  const displayArea = document.getElementById('codeDisplay');
   
-  // Check if there is actually code to copy
-  if (codeText) {
-    navigator.clipboard.writeText(codeText)
-      .then(() => {
-        // Visual feedback - optional but professional
-        const btn = document.getElementById('copyBtn');
-        const originalText = btn.innerText;
-        btn.innerText = 'Copied!';
-        setTimeout(() => btn.innerText = originalText, 2000);
-      })
-      .catch(err => {
-        console.error('Unable to copy code', err);
-      });
+  // Find the CSS rule that matches the shape class
+  // We look through all stylesheets loaded in the document
+  const styleSheets = Array.from(document.styleSheets);
+  let foundRule = '';
+
+  styleSheets.forEach((sheet) => {
+    try {
+      const rules = Array.from(sheet.cssRules);
+      const rule = rules.find(r => r.selectorText === `.${shapeName}`);
+      if (rule) {
+        // format the CSS text to look nice
+        foundRule = rule.cssText
+          .replace('{ ', '{\n  ')
+          .replace(/; /g, ';\n  ')
+          .replace(' }', '\n}');
+      }
+    } catch (e) {
+      // Skip cross-origin stylesheets if any
+    }
+  });
+
+  if (foundRule) {
+    codeContent.innerText = foundRule;
+    // Scroll to the display area so the user sees the code
+    displayArea.scrollIntoView({ behavior: 'smooth' });
   } else {
-    alert('Please select a shape first!');
+    codeContent.innerText = `/* CSS for .${shapeName} not found in app.css */`;
   }
 };

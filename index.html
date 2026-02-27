@@ -7,101 +7,57 @@
   <title>CSS Shape Library</title>
 </head>
 <body>
-  <h1>CSS Shape Library</h1>
-  <p>Welcome to the CSS Shape Library! Here you can find a collection of shapes created using pure CSS. Click on any shape to see the code and learn how to create it yourself.</p>
+    <h1>Curated CSS Shape Library</h1>
+    <p>Welcome! Here you can find a collection of shapes created using pure CSS. Click on any shape to see the code and learn how to create it yourself.</p>
+    
+    <section id="polygons">
+      <h2>Geometric Polygons</h2>
+      <div class="shapeContainer">
+        <div class="shape circle" onclick="showCode('circle')"></div>
+        <div class="shape square" onclick="showCode('square')"></div>
+        <div class="shape triangle" onclick="showCode('triangle')"></div>
+        <div class="shape rhombus" onclick="showCode('rhombus')"></div>
+        <div class="shape hexagon" onclick="showCode('hexagon')"></div>
+        <div class="shape octagon" onclick="showCode('octagon')"></div>
+        <div class="shape parallelogram" onclick="showCode('parallelogram')"></div>
+        <div class="shape trapezoid" onclick="showCode('trapezoid')"></div>
+      </div>
+    </section>
 
-  <div class="shapeContainer">
-    <div class="shape circle" onclick="showCode('circle')"></div>
-    <div class="shape square" onclick="showCode('square')"></div>
-    <div class="shape triangle" onclick="showCode('triangle')"></div>
-    <div class="shape rhombus" onclick="showCode('rhombus')"></div>
-    <div class="shape hexagon" onclick="showCode('hexagon')"></div>
-    <div class="shape octagon" onclick="showCode('octagon')"></div>
-    <div class="shape polygon" onclick="showCode('polygon')"></div>
-    <div class="shape parallelogram" onclick="showCode('parallelogram')"></div>
-    <div class="shape trapezoid" onclick="showCode('trapezoid')"></div>
+    <section id="interface">
+      <h2>UI & Interface Icons</h2>
+      <div class="shapeContainer">
+        <div class="shape arrow" onclick="showCode('arrow')"></div>
+        <div class="shape chevron" onclick="showCode('chevron')"></div>
+        <div class="shape plus" onclick="showCode('plus')"></div>
+        <div class="shape minus" onclick="showCode('minus')"></div>
+        <div class="shape cross" onclick="showCode('cross')"></div>
+        <div class="shape hamburgerMenu" onclick="showCode('hamburgerMenu')"></div>
+        <div class="shape wifiIcon" onclick="showCode('wifiIcon')"></div>
+        <div class="shape signal" onclick="showCode('signal')"></div>
+        <div class="shape pencil" onclick="showCode('pencil')"></div>
+      </div>
+    </section>
 
-    <div class="shape slantedEdge" onclick="showCode('slantedEdge')"></div>
-    <div class="shape scoopedCorners" onclick="showCode('scoopedCorners')"></div>
-    <div class="shape beveledCorners" onclick="showCode('beveledCorners')"></div>
-    <div class="shape curvedEdge" onclick="showCode('curvedEdge')"></div>
-    <div class="shape roundedEdge" onclick="showCode('roundedEdge')"></div>
-    <div class="shape invertedRadius" onclick="showCode('invertedRadius')"></div>
-    <div class="shape notch" onclick="showCode('notch')"></div>
-    <div class="shape scallopedBox" onclick="showCode('scallopedBox')"></div>
-    <div class="shape stamp" onclick="showCode('stamp')"></div>
-    <div class="shape zigzagEdge" onclick="showCode('zigzagEdge')"></div>
-    <div class="shape wavyEdge" onclick="showCode('wavyEdge')"></div>
-    <div class="shape wavyBox" onclick="showCode('wavyBox')"></div>
-    <div class="shape zigzagBox" onclick="showCode('zigzagBox')"></div>
-    <div class="shape zigzagLine" onclick="showCode('zigzagLine')"></div>
-    <div class="shape wavyLine" onclick="showCode('wavyLine')"></div>
-    <div class="shape wigglyBox" onclick="showCode('wigglyBox')"></div>
-    <div class="shape pointyBox" onclick="showCode('pointyBox')"></div>
-    <div class="shape circleCut" onclick="showCode('circleCut')"></div>
-    <div class="shape triangleCut" onclick="showCode('triangleCut')"></div>
-    <div class="shape curvedRectangle" onclick="showCode('curvedRectangle')"></div>
-    <div class="shape foldedRectangle" onclick="showCode('foldedRectangle')"></div>
+    <section id="abstract">
+      <h2>Abstract & Spiritual</h2>
+      <div class="shapeContainer">
+        <div class="shape yinYang" onclick="showCode('yinYang')"></div>
+        <div class="shape infinity" onclick="showCode('infinity')"></div>
+        <div class="shape flower" onclick="showCode('flower')"></div>
+        <div class="shape heart" onclick="showCode('heart')"></div>
+        <div class="shape star" onclick="showCode('star')"></div>
+        <div class="shape starburst" onclick="showCode('starburst')"></div>
+        <div class="shape sparkle" onclick="showCode('sparkle')"></div>
+        <div class="shape spiral" onclick="showCode('spiral')"></div>
+      </div>
+    </section>
 
-    <div class="shape ribbon" onclick="showCode('ribbon')"></div>
-    <div class="shape breadcrumb" onclick="showCode('breadcrumb')"></div>
-    <div class="shape speechBubble" onclick="showCode('speechBubble')"></div>
-    <div class="shape roundedTab" onclick="showCode('roundedTab')"></div>
-    <div class="shape arrow" onclick="showCode('arrow')"></div>
-    <div class="shape arc" onclick="showCode('arc')"></div>
-    <div class="shape sector" onclick="showCode('sector')"></div>
-    <div class="shape verticalRoundedTab" onclick="showCode('verticalRoundedTab')"></div>
-    <div class="shape cornerOnlyBorders" onclick="showCode('cornerOnlyBorders')"></div>
-    <div class="shape dashedCircle" onclick="showCode('dashedCircle')"></div>
-    <div class="shape gridlines" onclick="showCode('gridlines')"></div>
-    <div class="shape roundedDashes" onclick="showCode('roundedDashes')"></div>
-    <div class="shape chevron" onclick="showCode('chevron')"></div>
-    <div class="shape plus" onclick="showCode('plus')"></div>
-    <div class="shape cross" onclick="showCode('cross')"></div>
-    <div class="shape minus" onclick="showCode('minus')"></div>
-    <div class="shape lollipop" onclick="showCode('lollipop')"></div>
-
-    <div class="shape heart" onclick="showCode('heart')"></div>
-    <div class="shape star" onclick="showCode('star')"></div>
-    <div class="shape starburst" onclick="showCode('starburst')"></div>
-    <div class="shape flower" onclick="showCode('flower')"></div>
-    <div class="shape wavyCircle" onclick="showCode('wavyCircle')"></div>
-    <div class="shape squircle" onclick="showCode('squircle')"></div>
-    <div class="shape blob" onclick="showCode('blob')"></div>
-    <div class="shape sparkle" onclick="showCode('sparkle')"></div>
-    <div class="shape randomWavyEdge" onclick="showCode('randomWavyEdge')"></div>
-    <div class="shape yinYang" onclick="showCode('yinYang')"></div>
-
-    <div class="shape hamburgerMenu" onclick="showCode('hamburgerMenu')"></div>
-    <div class="shape battery" onclick="showCode('battery')"></div>
-    <div class="shape signal" onclick="showCode('signal')"></div>
-    <div class="shape wifiIcon" onclick="showCode('wifiIcon')"></div>
-    <div class="shape spiral" onclick="showCode('spiral')"></div>
-    <div class="shape infinity" onclick="showCode('infinity')"></div>
-    <div class="shape pixelatedCorners" onclick="showCode('pixelatedCorners')"></div>
-    <div class="shape filmstrip" onclick="showCode('filmstrip')"></div>
-    <div class="shape puzzlePiece" onclick="showCode('puzzlePiece')"></div>
-    <div class="shape pin" onclick="showCode('pin')"></div>
-    <div class="shape cloud" onclick="showCode('cloud')"></div>
-    <div class="shape thunder" onclick="showCode('thunder')"></div>
-    <div class="shape pencil" onclick="showCode('pencil')"></div>
-    <div class="shape pacman" onclick="showCode('pacman')"></div>
-    <div class="shape batman" onclick="showCode('batman')"></div>
-    <div class="shape skullAndCrossbones" onclick="showCode('skullAndCrossbones')"></div>
-
-    <div class="shape circleDivider" onclick="showCode('circleDivider')"></div>
-    <div class="shape triangleDivider" onclick="showCode('triangleDivider')"></div>
-    <div class="shape 3DZigzagEdge" onclick="showCode('3DZigzagEdge')"></div>
-    <div class="shape sphere" onclick="showCode('sphere')"></div>
-    <div class="shape cube" onclick="showCode('cube')"></div>
-    <div class="shape matrixOfCubes" onclick="showCode('matrixOfCubes')"></div>
-</div>
-
-  <div id="codeDisplay" class="codeDisplay">
-    <h2>Shape Code</h2>
-    <button id="copyBtn" onclick="copyToClipboard()">Copy CSS</button>
-    <pre id="codeContent"></pre>
- </div>
+    <div id="codeDisplay" class="codeDisplay">
+      <h2>Shape Code</h2>
+      <button id="copyBtn" onclick="copyToClipboard()">Copy CSS</button>
+      <pre id="codeContent"></pre>
+    </div>
 
   <script src="app.js"></script>
 </body>
